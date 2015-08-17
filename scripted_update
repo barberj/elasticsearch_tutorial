@@ -1,0 +1,7 @@
+curl -XPOST "http://192.168.59.103:9200/test/type1/1/_update" -d'
+{
+    "script" : "ctx._source.counter += count",
+    "params" : {
+        "count" : 4
+    }
+}'

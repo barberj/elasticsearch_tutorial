@@ -1,0 +1,5 @@
+curl -XPUT "http://192.168.59.103:9200/test/type1/1" -d'
+{
+    "counter" : 1,
+    "tags" : ["red"]
+}'
