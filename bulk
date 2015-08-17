@@ -1,0 +1,7 @@
+curl -XPUT "http://192.168.59.103:9200/_bulk" -d'
+{ "delete": { "_index": "movies", "_type": "movie", "_id": "1" }}
+{ "create": { "_index": "movies", "_type": "movie", "_id": "7" }}
+{ "title": "Man of Steel", "director": "Zack Snyder", "year": 2014, "genres": ["Super Hero", "Action"] }
+{ "update": { "_index": "movies", "_type": "movie", "_id": "2", "_retry_on_conflict" : 3 }}
+{ "doc": {"genres": ["Adventure", "Biography", "Drama", "Classic"] }}
+'

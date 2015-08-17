@@ -1,0 +1,10 @@
+curl -XPOST "http://192.168.59.103:9200/_search" -d'
+{
+    "query": {
+        "constant_score": {
+            "filter": {
+                "term": { "director": "francis" }
+            }
+        }
+    }
+}'

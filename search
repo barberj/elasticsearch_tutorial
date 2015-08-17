@@ -1,0 +1,9 @@
+curl -XPOST "http://192.168.59.103:9200/_search" -d'
+{
+    "query": {
+        "query_string": {
+            "query": "ford",
+            "fields": ["title"]
+        }
+    }
+}'
