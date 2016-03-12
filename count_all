@@ -1,0 +1,1 @@
+curl -XGET 'http://192.168.59.103:9200/movies/movie/_count'
